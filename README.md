@@ -51,6 +51,8 @@ project/
 ├── index.html
 ├── css/
 │   └── style.css
+├── img/
+│   └── logo_bsi.png
 ├── js/
 │   └── script.js
 └── README.md
