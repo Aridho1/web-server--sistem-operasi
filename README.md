@@ -103,7 +103,7 @@ git clone https://github.com/Aridho1/web-server--sistem-operasi.git
 Move into the project directory:
 
 ```bash
-cd REPOSITORY
+cd web-server--sistem-operasi
 ```
 
 > Replace `USERNAME` and `REPOSITORY` with the actual GitHub repository information.
