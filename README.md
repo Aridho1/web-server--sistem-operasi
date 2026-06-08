@@ -97,7 +97,7 @@ git --version
 Open Terminal, PowerShell, or Command Prompt and run:
 
 ```bash
-git clone https://github.com/USERNAME/REPOSITORY.git
+git clone https://github.com/Aridho1/web-server--sistem-operasi.git
 ```
 
 Move into the project directory:
