@@ -1,631 +1,637 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Web Server Implementation Using VMware and Ubuntu Server - Group Project Class 15.2A.01 Informatics Study Program">
-  <title>Web Server Implementation | VMware & Ubuntu Server</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web Server Implementation Using VMware and Ubuntu Server - Group Project Class 15.2A.04 Informatics Study Program" />
+    <title>Web Server Implementation | VMware & Ubuntu Server</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#hero" class="nav__logo">
+          <i class="fas fa-server"></i>
+          <span>
+            WebServer
+            <span class="nav__logo-accent">Project</span>
+          </span>
+        </a>
 
-  <!-- ==================== NAVIGATION ==================== -->
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#hero" class="nav__logo">
-        <i class="fas fa-server"></i>
-        <span>WebServer<span class="nav__logo-accent">Project</span></span>
-      </a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
 
-      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <i class="fas fa-bars"></i>
-      </button>
+        <ul class="nav__menu" id="nav-menu">
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#statistics" class="nav__link">Statistics</a></li>
+          <li class="nav__item"><a href="#technologies" class="nav__link">Technologies</a></li>
+          <li class="nav__item"><a href="#timeline" class="nav__link">Timeline</a></li>
+          <li class="nav__item"><a href="#team" class="nav__link">Team</a></li>
+          <li class="nav__item"><a href="#outcomes" class="nav__link">Outcomes</a></li>
+          <li class="nav__item"><a href="#process" class="nav__link">Process</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <ul class="nav__menu" id="nav-menu">
-        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-        <li class="nav__item"><a href="#statistics" class="nav__link">Statistics</a></li>
-        <li class="nav__item"><a href="#technologies" class="nav__link">Technologies</a></li>
-        <li class="nav__item"><a href="#timeline" class="nav__link">Timeline</a></li>
-        <li class="nav__item"><a href="#team" class="nav__link">Team</a></li>
-        <li class="nav__item"><a href="#outcomes" class="nav__link">Outcomes</a></li>
-        <li class="nav__item"><a href="#process" class="nav__link">Process</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero" id="hero">
-      <div class="hero__bg-icons" aria-hidden="true">
-        <i class="fas fa-server hero__bg-icon hero__bg-icon--1"></i>
-        <i class="fas fa-network-wired hero__bg-icon hero__bg-icon--2"></i>
-        <i class="fab fa-linux hero__bg-icon hero__bg-icon--3"></i>
-        <i class="fas fa-cloud hero__bg-icon hero__bg-icon--4"></i>
-      </div>
-
-      <div class="container hero__container">
-        <div class="hero__badge reveal">
-          <i class="fas fa-microchip"></i>
-          <span>Infrastructure &amp; Systems Project</span>
+    <main>
+      <!-- ==================== HERO SECTION ==================== -->
+      <section class="hero" id="hero">
+        <div class="hero__bg-icons" aria-hidden="true">
+          <i class="fas fa-server hero__bg-icon hero__bg-icon--1"></i>
+          <i class="fas fa-network-wired hero__bg-icon hero__bg-icon--2"></i>
+          <i class="fab fa-linux hero__bg-icon hero__bg-icon--3"></i>
+          <i class="fas fa-cloud hero__bg-icon hero__bg-icon--4"></i>
         </div>
 
-        <h1 class="hero__title reveal">
-          Web Server Implementation Using VMware and Ubuntu Server
-        </h1>
-
-        <p class="hero__subtitle reveal">
-          Group Project &mdash; Class 15.2A.01 | Informatics Study Program
-        </p>
-
-        <p class="hero__description reveal">
-          A comprehensive implementation of a production-ready web server environment
-          leveraging virtualization, Linux administration, and modern web technologies.
-        </p>
-
-        <div class="hero__cta reveal">
-          <a href="#team" class="btn btn--primary">
-            <i class="fas fa-users"></i>
-            View Team Members
-          </a>
-          <a href="#about" class="btn btn--outline">
-            <i class="fas fa-arrow-right"></i>
-            Explore Project
-          </a>
-        </div>
-
-        <div class="hero__tech-icons reveal">
-          <div class="hero__tech-item">
-            <i class="fas fa-server"></i>
-            <span>Server</span>
+        <div class="container hero__container">
+          <div class="hero__badge reveal">
+            <i class="fas fa-microchip"></i>
+            <span>Infrastructure &amp; Systems Project</span>
           </div>
-          <div class="hero__tech-item">
-            <i class="fas fa-network-wired"></i>
-            <span>Network</span>
-          </div>
-          <div class="hero__tech-item">
-            <i class="fab fa-linux"></i>
-            <span>Linux</span>
-          </div>
-          <div class="hero__tech-item">
-            <i class="fas fa-cloud"></i>
-            <span>Cloud</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ==================== ABOUT THE PROJECT ==================== -->
-    <section class="section about" id="about">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__tag">Overview</span>
-          <h2 class="section__title">About The Project</h2>
-          <p class="section__description">
-            This project demonstrates the end-to-end process of building and deploying
-            a web server infrastructure in a virtualized environment, combining industry-standard
-            tools and best practices in server administration.
+          <h1 class="hero__title reveal">Web Server Implementation Using VMware and Ubuntu Server</h1>
+
+          <p class="hero__subtitle reveal">Group Project &mdash; Class 15.2A.04 | Informatics Study Program</p>
+
+          <p class="hero__description reveal">
+            A comprehensive implementation of a production-ready web server environment leveraging virtualization, Linux administration, and modern web technologies.
           </p>
-        </div>
 
-        <div class="about__grid">
-          <article class="about__card reveal">
-            <div class="about__icon">
-              <i class="fas fa-cubes"></i>
-            </div>
-            <h3 class="about__card-title">Virtualization using VMware</h3>
-            <p class="about__card-text">
-              Learn to create and manage virtual machines using VMware Workstation,
-              enabling isolated server environments on a single physical host without
-              additional hardware investment.
-            </p>
-          </article>
-
-          <article class="about__card reveal">
-            <div class="about__icon">
-              <i class="fab fa-ubuntu"></i>
-            </div>
-            <h3 class="about__card-title">Ubuntu Server Installation</h3>
-            <p class="about__card-text">
-              Install and configure Ubuntu Server as the operating system foundation,
-              establishing a stable, secure, and widely-supported Linux platform for
-              web hosting services.
-            </p>
-          </article>
-
-          <article class="about__card reveal">
-            <div class="about__icon">
-              <i class="fas fa-cog"></i>
-            </div>
-            <h3 class="about__card-title">Web Server Configuration</h3>
-            <p class="about__card-text">
-              Configure Nginx as a high-performance web server to handle HTTP requests,
-              serve static content, and manage virtual host configurations for deployed
-              websites.
-            </p>
-          </article>
-
-          <article class="about__card reveal">
-            <div class="about__icon">
-              <i class="fas fa-terminal"></i>
-            </div>
-            <h3 class="about__card-title">Basic Server Administration</h3>
-            <p class="about__card-text">
-              Gain hands-on experience with essential Linux administration tasks including
-              user management, firewall configuration, SSH access, and system monitoring
-              through the command line.
-            </p>
-          </article>
-
-          <article class="about__card reveal">
-            <div class="about__icon">
-              <i class="fas fa-rocket"></i>
-            </div>
-            <h3 class="about__card-title">Website Deployment</h3>
-            <p class="about__card-text">
-              Deploy a fully functional website to the configured server environment,
-              validating accessibility, performance, and proper file structure across
-              the virtualized infrastructure.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== SERVER STATISTICS ==================== -->
-    <section class="section statistics" id="statistics">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__tag">Infrastructure</span>
-          <h2 class="section__title">Server Statistics</h2>
-          <p class="section__description">
-            Key metrics and specifications of our deployed server environment.
-          </p>
-        </div>
-
-        <div class="stats__grid">
-          <article class="stats__card reveal">
-            <div class="stats__icon">
-              <i class="fab fa-ubuntu"></i>
-            </div>
-            <span class="stats__label">Operating System</span>
-            <span class="stats__value">Ubuntu Server</span>
-          </article>
-
-          <article class="stats__card reveal">
-            <div class="stats__icon">
-              <i class="fas fa-globe"></i>
-            </div>
-            <span class="stats__label">Web Server</span>
-            <span class="stats__value">Nginx</span>
-          </article>
-
-          <article class="stats__card reveal">
-            <div class="stats__icon">
-              <i class="fas fa-cubes"></i>
-            </div>
-            <span class="stats__label">Virtualization</span>
-            <span class="stats__value">VMware</span>
-          </article>
-
-          <article class="stats__card reveal">
-            <div class="stats__icon stats__icon--online">
-              <i class="fas fa-circle-check"></i>
-            </div>
-            <span class="stats__label">Status</span>
-            <span class="stats__value stats__value--online">Online</span>
-          </article>
-
-          <article class="stats__card reveal">
-            <div class="stats__icon">
+          <div class="hero__cta reveal">
+            <a href="#team" class="btn btn--primary">
               <i class="fas fa-users"></i>
-            </div>
-            <span class="stats__label">Team Members</span>
-            <span class="stats__value">5</span>
-          </article>
-        </div>
-      </div>
-    </section>
+              View Team Members
+            </a>
+            <a href="#about" class="btn btn--outline">
+              <i class="fas fa-arrow-right"></i>
+              Explore Project
+            </a>
+          </div>
 
-    <!-- ==================== TECHNOLOGIES USED ==================== -->
-    <section class="section technologies" id="technologies">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__tag">Stack</span>
-          <h2 class="section__title">Technologies Used</h2>
-          <p class="section__description">
-            The tools and technologies that power our web server implementation.
-          </p>
-        </div>
-
-        <div class="tech__grid">
-          <article class="tech__card reveal">
-            <div class="tech__icon">
-              <i class="fas fa-cubes"></i>
-            </div>
-            <h3 class="tech__name">VMware</h3>
-            <p class="tech__desc">
-              Industry-leading virtualization platform for creating and managing
-              isolated virtual machine environments.
-            </p>
-          </article>
-
-          <article class="tech__card reveal">
-            <div class="tech__icon">
-              <i class="fab fa-ubuntu"></i>
-            </div>
-            <h3 class="tech__name">Ubuntu Server</h3>
-            <p class="tech__desc">
-              Enterprise-grade Linux distribution optimized for server workloads,
-              security, and long-term stability.
-            </p>
-          </article>
-
-          <article class="tech__card reveal">
-            <div class="tech__icon">
+          <div class="hero__tech-icons reveal">
+            <div class="hero__tech-item">
               <i class="fas fa-server"></i>
+              <span>Server</span>
             </div>
-            <h3 class="tech__name">Nginx</h3>
-            <p class="tech__desc">
-              High-performance HTTP server and reverse proxy known for efficiency,
-              scalability, and low resource consumption.
-            </p>
-          </article>
-
-          <article class="tech__card reveal">
-            <div class="tech__icon">
-              <i class="fab fa-html5"></i>
+            <div class="hero__tech-item">
+              <i class="fas fa-network-wired"></i>
+              <span>Network</span>
             </div>
-            <h3 class="tech__name">HTML5</h3>
-            <p class="tech__desc">
-              Semantic markup language for structuring web content with modern
-              standards and accessibility support.
-            </p>
-          </article>
-
-          <article class="tech__card reveal">
-            <div class="tech__icon">
-              <i class="fab fa-css3-alt"></i>
+            <div class="hero__tech-item">
+              <i class="fab fa-linux"></i>
+              <span>Linux</span>
             </div>
-            <h3 class="tech__name">CSS3</h3>
-            <p class="tech__desc">
-              Advanced styling language enabling responsive layouts, animations,
-              and polished visual presentation.
-            </p>
-          </article>
-
-          <article class="tech__card reveal">
-            <div class="tech__icon">
-              <i class="fab fa-js"></i>
+            <div class="hero__tech-item">
+              <i class="fas fa-cloud"></i>
+              <span>Cloud</span>
             </div>
-            <h3 class="tech__name">JavaScript</h3>
-            <p class="tech__desc">
-              Client-side scripting for interactive features, smooth navigation,
-              and dynamic user experience enhancements.
-            </p>
-          </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==================== PROJECT TIMELINE ==================== -->
-    <section class="section timeline-section" id="timeline">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__tag">Schedule</span>
-          <h2 class="section__title">Project Timeline</h2>
-          <p class="section__description">
-            A structured four-week development plan from environment setup to deployment.
+      <!-- ==================== ABOUT THE PROJECT ==================== -->
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="section__tag">Overview</span>
+            <h2 class="section__title">About The Project</h2>
+            <p class="section__description">
+              This project demonstrates the end-to-end process of building and deploying a web server infrastructure in a virtualized environment, combining industry-standard tools and best practices
+              in server administration.
+            </p>
+          </div>
+
+          <div class="about__grid">
+            <article class="about__card reveal">
+              <div class="about__icon">
+                <i class="fas fa-cubes"></i>
+              </div>
+              <h3 class="about__card-title">Virtualization using VMware</h3>
+              <p class="about__card-text">
+                Learn to create and manage virtual machines using VMware Workstation, enabling isolated server environments on a single physical host without additional hardware investment.
+              </p>
+            </article>
+
+            <article class="about__card reveal">
+              <div class="about__icon">
+                <i class="fab fa-ubuntu"></i>
+              </div>
+              <h3 class="about__card-title">Ubuntu Server Installation</h3>
+              <p class="about__card-text">
+                Install and configure Ubuntu Server as the operating system foundation, establishing a stable, secure, and widely-supported Linux platform for web hosting services.
+              </p>
+            </article>
+
+            <article class="about__card reveal">
+              <div class="about__icon">
+                <i class="fas fa-cog"></i>
+              </div>
+              <h3 class="about__card-title">Web Server Configuration</h3>
+              <p class="about__card-text">
+                Configure Nginx as a high-performance web server to handle HTTP requests, serve static content, and manage virtual host configurations for deployed websites.
+              </p>
+            </article>
+
+            <article class="about__card reveal">
+              <div class="about__icon">
+                <i class="fas fa-terminal"></i>
+              </div>
+              <h3 class="about__card-title">Basic Server Administration</h3>
+              <p class="about__card-text">
+                Gain hands-on experience with essential Linux administration tasks including user management, firewall configuration, SSH access, and system monitoring through the command line.
+              </p>
+            </article>
+
+            <article class="about__card reveal">
+              <div class="about__icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3 class="about__card-title">Website Deployment</h3>
+              <p class="about__card-text">
+                Deploy a fully functional website to the configured server environment, validating accessibility, performance, and proper file structure across the virtualized infrastructure.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SERVER STATISTICS ==================== -->
+      <section class="section statistics" id="statistics">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="section__tag">Infrastructure</span>
+            <h2 class="section__title">Server Statistics</h2>
+            <p class="section__description">Key metrics and specifications of our deployed server environment.</p>
+          </div>
+
+          <div class="stats__grid">
+            <article class="stats__card reveal">
+              <div class="stats__icon">
+                <i class="fab fa-ubuntu"></i>
+              </div>
+              <span class="stats__label">Operating System</span>
+              <span class="stats__value">Ubuntu Server</span>
+            </article>
+
+            <article class="stats__card reveal">
+              <div class="stats__icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <span class="stats__label">Web Server</span>
+              <span class="stats__value">Nginx</span>
+            </article>
+
+            <article class="stats__card reveal">
+              <div class="stats__icon">
+                <i class="fas fa-cubes"></i>
+              </div>
+              <span class="stats__label">Virtualization</span>
+              <span class="stats__value">VMware</span>
+            </article>
+
+            <article class="stats__card reveal">
+              <div class="stats__icon stats__icon--online">
+                <i class="fas fa-circle-check"></i>
+              </div>
+              <span class="stats__label">Status</span>
+              <span class="stats__value stats__value--online">Online</span>
+            </article>
+
+            <article class="stats__card reveal">
+              <div class="stats__icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <span class="stats__label">Team Members</span>
+              <span class="stats__value">5</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TECHNOLOGIES USED ==================== -->
+      <section class="section technologies" id="technologies">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="section__tag">Stack</span>
+            <h2 class="section__title">Technologies Used</h2>
+            <p class="section__description">The tools and technologies that power our web server implementation.</p>
+          </div>
+
+          <div class="tech__grid">
+            <article class="tech__card reveal">
+              <div class="tech__icon">
+                <i class="fas fa-cubes"></i>
+              </div>
+              <h3 class="tech__name">VMware</h3>
+              <p class="tech__desc">Industry-leading virtualization platform for creating and managing isolated virtual machine environments.</p>
+            </article>
+
+            <article class="tech__card reveal">
+              <div class="tech__icon">
+                <i class="fab fa-ubuntu"></i>
+              </div>
+              <h3 class="tech__name">Ubuntu Server</h3>
+              <p class="tech__desc">Enterprise-grade Linux distribution optimized for server workloads, security, and long-term stability.</p>
+            </article>
+
+            <article class="tech__card reveal">
+              <div class="tech__icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3 class="tech__name">Nginx</h3>
+              <p class="tech__desc">High-performance HTTP server and reverse proxy known for efficiency, scalability, and low resource consumption.</p>
+            </article>
+
+            <article class="tech__card reveal">
+              <div class="tech__icon">
+                <i class="fab fa-html5"></i>
+              </div>
+              <h3 class="tech__name">HTML5</h3>
+              <p class="tech__desc">Semantic markup language for structuring web content with modern standards and accessibility support.</p>
+            </article>
+
+            <article class="tech__card reveal">
+              <div class="tech__icon">
+                <i class="fab fa-css3-alt"></i>
+              </div>
+              <h3 class="tech__name">CSS3</h3>
+              <p class="tech__desc">Advanced styling language enabling responsive layouts, animations, and polished visual presentation.</p>
+            </article>
+
+            <article class="tech__card reveal">
+              <div class="tech__icon">
+                <i class="fab fa-js"></i>
+              </div>
+              <h3 class="tech__name">JavaScript</h3>
+              <p class="tech__desc">Client-side scripting for interactive features, smooth navigation, and dynamic user experience enhancements.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PROJECT TIMELINE ==================== -->
+      <section class="section timeline-section" id="timeline">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="section__tag">Schedule</span>
+            <h2 class="section__title">Project Timeline</h2>
+            <p class="section__description">A structured four-week development plan from environment setup to deployment.</p>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline__item reveal">
+              <div class="timeline__marker">
+                <span class="timeline__week">Week 1</span>
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">Environment Preparation</h3>
+                <p class="timeline__text">VMware installation and virtualization environment preparation. Setting up host machine requirements and creating the initial virtual machine blueprint.</p>
+              </div>
+            </article>
+
+            <article class="timeline__item reveal">
+              <div class="timeline__marker">
+                <span class="timeline__week">Week 2</span>
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">Operating System Setup</h3>
+                <p class="timeline__text">Ubuntu Server installation and configuration. Configuring network settings, updating packages, and establishing a secure base system.</p>
+              </div>
+            </article>
+
+            <article class="timeline__item reveal">
+              <div class="timeline__marker">
+                <span class="timeline__week">Week 3</span>
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">Web Server Configuration</h3>
+                <p class="timeline__text">Nginx installation and web server configuration. Setting up virtual hosts, configuring firewall rules, and enabling remote access via SSH.</p>
+              </div>
+            </article>
+
+            <article class="timeline__item reveal">
+              <div class="timeline__marker">
+                <span class="timeline__week">Week 4</span>
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">Deployment &amp; Testing</h3>
+                <p class="timeline__text">Website development, testing, and deployment. Validating server accessibility, performance benchmarks, and final project documentation.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TEAM MEMBERS ==================== -->
+      <section class="section team" id="team">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="section__tag">Collaboration</span>
+            <h2 class="section__title">Team Members</h2>
+            <p class="section__description">Class 15.2A.04 &mdash; Informatics Study Program, Faculty of Information Technology (FTI)</p>
+          </div>
+
+          <div class="team__grid">
+            <article class="team__card reveal">
+              <div class="team__avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3 class="team__name">Ahmad Fauzi Kurniawan</h3>
+              <ul class="team__info">
+                <li>
+                  <i class="fas fa-id-card"></i>
+                  <span>15250158</span>
+                </li>
+                <li>
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>15.2A.04</span>
+                </li>
+                <li>
+                  <i class="fas fa-book"></i>
+                  <span>Informatics</span>
+                </li>
+                <li>
+                  <i class="fas fa-building"></i>
+                  <span>Faculty of Information Technology (FTI)</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="team__card reveal">
+              <div class="team__avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3 class="team__name">Dimaz Rafif Alvaro</h3>
+              <ul class="team__info">
+                <li>
+                  <i class="fas fa-id-card"></i>
+                  <span>15250511</span>
+                </li>
+                <li>
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>15.2A.04</span>
+                </li>
+                <li>
+                  <i class="fas fa-book"></i>
+                  <span>Informatics</span>
+                </li>
+                <li>
+                  <i class="fas fa-building"></i>
+                  <span>Faculty of Information Technology (FTI)</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="team__card reveal">
+              <div class="team__avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3 class="team__name">Farhan</h3>
+              <ul class="team__info">
+                <li>
+                  <i class="fas fa-id-card"></i>
+                  <span>15250076</span>
+                </li>
+                <li>
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>15.2A.04</span>
+                </li>
+                <li>
+                  <i class="fas fa-book"></i>
+                  <span>Informatics</span>
+                </li>
+                <li>
+                  <i class="fas fa-building"></i>
+                  <span>Faculty of Information Technology (FTI)</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="team__card reveal">
+              <div class="team__avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3 class="team__name">Muhamad Aridho</h3>
+              <ul class="team__info">
+                <li>
+                  <i class="fas fa-id-card"></i>
+                  <span>15250365</span>
+                </li>
+                <li>
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>15.2A.04</span>
+                </li>
+                <li>
+                  <i class="fas fa-book"></i>
+                  <span>Informatics</span>
+                </li>
+                <li>
+                  <i class="fas fa-building"></i>
+                  <span>Faculty of Information Technology (FTI)</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="team__card reveal">
+              <div class="team__avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3 class="team__name">Muhamad Rifqi Adriansyah</h3>
+              <ul class="team__info">
+                <li>
+                  <i class="fas fa-id-card"></i>
+                  <span>15250900</span>
+                </li>
+                <li>
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>15.2A.04</span>
+                </li>
+                <li>
+                  <i class="fas fa-book"></i>
+                  <span>Informatics</span>
+                </li>
+                <li>
+                  <i class="fas fa-building"></i>
+                  <span>Faculty of Information Technology (FTI)</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== LEARNING OUTCOMES ==================== -->
+      <section class="section outcomes" id="outcomes">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="section__tag">Knowledge</span>
+            <h2 class="section__title">Learning Outcomes</h2>
+            <p class="section__description">Core competencies developed through this hands-on server implementation project.</p>
+          </div>
+
+          <div class="outcomes__grid">
+            <article class="outcomes__card reveal">
+              <div class="outcomes__icon">
+                <i class="fas fa-cubes"></i>
+              </div>
+              <h3 class="outcomes__title">Virtualization</h3>
+              <p class="outcomes__text">
+                Virtualization enables multiple operating systems to run concurrently on a single physical machine by abstracting hardware resources into isolated virtual environments. This technology
+                reduces infrastructure costs, improves resource utilization, and allows developers to test server configurations safely without affecting the host system.
+              </p>
+            </article>
+
+            <article class="outcomes__card reveal">
+              <div class="outcomes__icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h3 class="outcomes__title">Web Server</h3>
+              <p class="outcomes__text">
+                A web server plays a critical role in the modern internet by handling client requests and serving web content efficiently. It processes HTTP/HTTPS protocols, manages connections,
+                delivers static and dynamic files, and ensures reliable communication between browsers and hosted applications.
+              </p>
+            </article>
+
+            <article class="outcomes__card reveal">
+              <div class="outcomes__icon">
+                <i class="fas fa-terminal"></i>
+              </div>
+              <h3 class="outcomes__title">Linux Administration</h3>
+              <p class="outcomes__text">
+                Managing and configuring Linux-based servers is essential for modern IT infrastructure. Linux administration encompasses user and permission management, package installation, service
+                configuration, security hardening, and system monitoring &mdash; skills directly applicable in enterprise environments.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== IMPLEMENTATION PROCESS ==================== -->
+      <section class="section process" id="process">
+        <div class="container">
+          <div class="section__header reveal">
+            <span class="section__tag">Workflow</span>
+            <h2 class="section__title">Implementation Process</h2>
+            <p class="section__description">Step-by-step workflow from virtual machine creation to live web server deployment.</p>
+          </div>
+
+          <div class="process__flow">
+            <article class="process__step reveal">
+              <div class="process__number">01</div>
+              <div class="process__icon"><i class="fas fa-desktop"></i></div>
+              <h3 class="process__title">Create a Virtual Machine in VMware</h3>
+              <p class="process__text">Provision a new VM with allocated CPU, memory, and storage resources.</p>
+            </article>
+
+            <div class="process__connector reveal" aria-hidden="true">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <article class="process__step reveal">
+              <div class="process__number">02</div>
+              <div class="process__icon"><i class="fab fa-ubuntu"></i></div>
+              <h3 class="process__title">Install Ubuntu Server</h3>
+              <p class="process__text">Deploy Ubuntu Server OS with network and user account configuration.</p>
+            </article>
+
+            <div class="process__connector reveal" aria-hidden="true">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <article class="process__step reveal">
+              <div class="process__number">03</div>
+              <div class="process__icon"><i class="fas fa-lock"></i></div>
+              <h3 class="process__title">Enable SSH Access</h3>
+              <p class="process__text">Configure secure remote shell access for server administration.</p>
+            </article>
+
+            <div class="process__connector reveal" aria-hidden="true">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <article class="process__step reveal">
+              <div class="process__number">04</div>
+              <div class="process__icon"><i class="fas fa-download"></i></div>
+              <h3 class="process__title">Install Nginx</h3>
+              <p class="process__text">Install and start the Nginx web server service on Ubuntu.</p>
+            </article>
+
+            <div class="process__connector reveal" aria-hidden="true">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <article class="process__step reveal">
+              <div class="process__number">05</div>
+              <div class="process__icon"><i class="fas fa-folder-open"></i></div>
+              <h3 class="process__title">Configure Website Files</h3>
+              <p class="process__text">Deploy HTML, CSS, and JS files to the web root directory.</p>
+            </article>
+
+            <div class="process__connector reveal" aria-hidden="true">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <article class="process__step reveal">
+              <div class="process__number">06</div>
+              <div class="process__icon"><i class="fas fa-check-circle"></i></div>
+              <h3 class="process__title">Test Web Server Accessibility</h3>
+              <p class="process__text">Verify the website is accessible via browser and network testing.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__brand">
+          <i class="fas fa-server"></i>
+          <span>Web Server Implementation Project</span>
+        </div>
+
+        <div class="footer__info">
+          <p>
+            <i class="fas fa-graduation-cap"></i>
+            Class 15.2A.04
+          </p>
+          <p>
+            <i class="fas fa-book"></i>
+            Informatics Study Program
+          </p>
+          <p>
+            <i class="fas fa-building"></i>
+            Faculty of Information Technology (FTI)
           </p>
         </div>
 
-        <div class="timeline">
-          <article class="timeline__item reveal">
-            <div class="timeline__marker">
-              <span class="timeline__week">Week 1</span>
-            </div>
-            <div class="timeline__content">
-              <h3 class="timeline__title">Environment Preparation</h3>
-              <p class="timeline__text">
-                VMware installation and virtualization environment preparation.
-                Setting up host machine requirements and creating the initial
-                virtual machine blueprint.
-              </p>
-            </div>
-          </article>
-
-          <article class="timeline__item reveal">
-            <div class="timeline__marker">
-              <span class="timeline__week">Week 2</span>
-            </div>
-            <div class="timeline__content">
-              <h3 class="timeline__title">Operating System Setup</h3>
-              <p class="timeline__text">
-                Ubuntu Server installation and configuration. Configuring network
-                settings, updating packages, and establishing a secure base system.
-              </p>
-            </div>
-          </article>
-
-          <article class="timeline__item reveal">
-            <div class="timeline__marker">
-              <span class="timeline__week">Week 3</span>
-            </div>
-            <div class="timeline__content">
-              <h3 class="timeline__title">Web Server Configuration</h3>
-              <p class="timeline__text">
-                Nginx installation and web server configuration. Setting up virtual
-                hosts, configuring firewall rules, and enabling remote access via SSH.
-              </p>
-            </div>
-          </article>
-
-          <article class="timeline__item reveal">
-            <div class="timeline__marker">
-              <span class="timeline__week">Week 4</span>
-            </div>
-            <div class="timeline__content">
-              <h3 class="timeline__title">Deployment &amp; Testing</h3>
-              <p class="timeline__text">
-                Website development, testing, and deployment. Validating server
-                accessibility, performance benchmarks, and final project documentation.
-              </p>
-            </div>
-          </article>
-        </div>
+        <p class="footer__copyright">&copy; 2026 Web Server Implementation Project. All rights reserved.</p>
       </div>
-    </section>
+    </footer>
 
-    <!-- ==================== TEAM MEMBERS ==================== -->
-    <section class="section team" id="team">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__tag">Collaboration</span>
-          <h2 class="section__title">Team Members</h2>
-          <p class="section__description">
-            Class 15.2A.01 &mdash; Informatics Study Program, Faculty of Information Technology (FTI)
-          </p>
-        </div>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
-        <div class="team__grid">
-          <article class="team__card reveal">
-            <div class="team__avatar">
-              <i class="fas fa-user"></i>
-            </div>
-            <h3 class="team__name">Ahmad Fauzi Kurniawan</h3>
-            <ul class="team__info">
-              <li><i class="fas fa-id-card"></i> <span>15250158</span></li>
-              <li><i class="fas fa-graduation-cap"></i> <span>15.2A.01</span></li>
-              <li><i class="fas fa-book"></i> <span>Informatics</span></li>
-              <li><i class="fas fa-building"></i> <span>Faculty of Information Technology (FTI)</span></li>
-            </ul>
-          </article>
-
-          <article class="team__card reveal">
-            <div class="team__avatar">
-              <i class="fas fa-user"></i>
-            </div>
-            <h3 class="team__name">Dimaz Rafif Alvaro</h3>
-            <ul class="team__info">
-              <li><i class="fas fa-id-card"></i> <span>15250511</span></li>
-              <li><i class="fas fa-graduation-cap"></i> <span>15.2A.01</span></li>
-              <li><i class="fas fa-book"></i> <span>Informatics</span></li>
-              <li><i class="fas fa-building"></i> <span>Faculty of Information Technology (FTI)</span></li>
-            </ul>
-          </article>
-
-          <article class="team__card reveal">
-            <div class="team__avatar">
-              <i class="fas fa-user"></i>
-            </div>
-            <h3 class="team__name">Farhan</h3>
-            <ul class="team__info">
-              <li><i class="fas fa-id-card"></i> <span>15250076</span></li>
-              <li><i class="fas fa-graduation-cap"></i> <span>15.2A.01</span></li>
-              <li><i class="fas fa-book"></i> <span>Informatics</span></li>
-              <li><i class="fas fa-building"></i> <span>Faculty of Information Technology (FTI)</span></li>
-            </ul>
-          </article>
-
-          <article class="team__card reveal">
-            <div class="team__avatar">
-              <i class="fas fa-user"></i>
-            </div>
-            <h3 class="team__name">Muhamad Aridho</h3>
-            <ul class="team__info">
-              <li><i class="fas fa-id-card"></i> <span>15250365</span></li>
-              <li><i class="fas fa-graduation-cap"></i> <span>15.2A.01</span></li>
-              <li><i class="fas fa-book"></i> <span>Informatics</span></li>
-              <li><i class="fas fa-building"></i> <span>Faculty of Information Technology (FTI)</span></li>
-            </ul>
-          </article>
-
-          <article class="team__card reveal">
-            <div class="team__avatar">
-              <i class="fas fa-user"></i>
-            </div>
-            <h3 class="team__name">Muhamad Rifqi Adriansyah</h3>
-            <ul class="team__info">
-              <li><i class="fas fa-id-card"></i> <span>15250900</span></li>
-              <li><i class="fas fa-graduation-cap"></i> <span>15.2A.01</span></li>
-              <li><i class="fas fa-book"></i> <span>Informatics</span></li>
-              <li><i class="fas fa-building"></i> <span>Faculty of Information Technology (FTI)</span></li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== LEARNING OUTCOMES ==================== -->
-    <section class="section outcomes" id="outcomes">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__tag">Knowledge</span>
-          <h2 class="section__title">Learning Outcomes</h2>
-          <p class="section__description">
-            Core competencies developed through this hands-on server implementation project.
-          </p>
-        </div>
-
-        <div class="outcomes__grid">
-          <article class="outcomes__card reveal">
-            <div class="outcomes__icon">
-              <i class="fas fa-cubes"></i>
-            </div>
-            <h3 class="outcomes__title">Virtualization</h3>
-            <p class="outcomes__text">
-              Virtualization enables multiple operating systems to run concurrently on a
-              single physical machine by abstracting hardware resources into isolated virtual
-              environments. This technology reduces infrastructure costs, improves resource
-              utilization, and allows developers to test server configurations safely without
-              affecting the host system.
-            </p>
-          </article>
-
-          <article class="outcomes__card reveal">
-            <div class="outcomes__icon">
-              <i class="fas fa-globe"></i>
-            </div>
-            <h3 class="outcomes__title">Web Server</h3>
-            <p class="outcomes__text">
-              A web server plays a critical role in the modern internet by handling client
-              requests and serving web content efficiently. It processes HTTP/HTTPS protocols,
-              manages connections, delivers static and dynamic files, and ensures reliable
-              communication between browsers and hosted applications.
-            </p>
-          </article>
-
-          <article class="outcomes__card reveal">
-            <div class="outcomes__icon">
-              <i class="fas fa-terminal"></i>
-            </div>
-            <h3 class="outcomes__title">Linux Administration</h3>
-            <p class="outcomes__text">
-              Managing and configuring Linux-based servers is essential for modern IT
-              infrastructure. Linux administration encompasses user and permission management,
-              package installation, service configuration, security hardening, and system
-              monitoring &mdash; skills directly applicable in enterprise environments.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== IMPLEMENTATION PROCESS ==================== -->
-    <section class="section process" id="process">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__tag">Workflow</span>
-          <h2 class="section__title">Implementation Process</h2>
-          <p class="section__description">
-            Step-by-step workflow from virtual machine creation to live web server deployment.
-          </p>
-        </div>
-
-        <div class="process__flow">
-          <article class="process__step reveal">
-            <div class="process__number">01</div>
-            <div class="process__icon"><i class="fas fa-desktop"></i></div>
-            <h3 class="process__title">Create a Virtual Machine in VMware</h3>
-            <p class="process__text">Provision a new VM with allocated CPU, memory, and storage resources.</p>
-          </article>
-
-          <div class="process__connector reveal" aria-hidden="true">
-            <i class="fas fa-chevron-down"></i>
-          </div>
-
-          <article class="process__step reveal">
-            <div class="process__number">02</div>
-            <div class="process__icon"><i class="fab fa-ubuntu"></i></div>
-            <h3 class="process__title">Install Ubuntu Server</h3>
-            <p class="process__text">Deploy Ubuntu Server OS with network and user account configuration.</p>
-          </article>
-
-          <div class="process__connector reveal" aria-hidden="true">
-            <i class="fas fa-chevron-down"></i>
-          </div>
-
-          <article class="process__step reveal">
-            <div class="process__number">03</div>
-            <div class="process__icon"><i class="fas fa-lock"></i></div>
-            <h3 class="process__title">Enable SSH Access</h3>
-            <p class="process__text">Configure secure remote shell access for server administration.</p>
-          </article>
-
-          <div class="process__connector reveal" aria-hidden="true">
-            <i class="fas fa-chevron-down"></i>
-          </div>
-
-          <article class="process__step reveal">
-            <div class="process__number">04</div>
-            <div class="process__icon"><i class="fas fa-download"></i></div>
-            <h3 class="process__title">Install Nginx</h3>
-            <p class="process__text">Install and start the Nginx web server service on Ubuntu.</p>
-          </article>
-
-          <div class="process__connector reveal" aria-hidden="true">
-            <i class="fas fa-chevron-down"></i>
-          </div>
-
-          <article class="process__step reveal">
-            <div class="process__number">05</div>
-            <div class="process__icon"><i class="fas fa-folder-open"></i></div>
-            <h3 class="process__title">Configure Website Files</h3>
-            <p class="process__text">Deploy HTML, CSS, and JS files to the web root directory.</p>
-          </article>
-
-          <div class="process__connector reveal" aria-hidden="true">
-            <i class="fas fa-chevron-down"></i>
-          </div>
-
-          <article class="process__step reveal">
-            <div class="process__number">06</div>
-            <div class="process__icon"><i class="fas fa-check-circle"></i></div>
-            <h3 class="process__title">Test Web Server Accessibility</h3>
-            <p class="process__text">Verify the website is accessible via browser and network testing.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer">
-    <div class="container footer__container">
-      <div class="footer__brand">
-        <i class="fas fa-server"></i>
-        <span>Web Server Implementation Project</span>
-      </div>
-
-      <div class="footer__info">
-        <p><i class="fas fa-graduation-cap"></i> Class 15.2A.01</p>
-        <p><i class="fas fa-book"></i> Informatics Study Program</p>
-        <p><i class="fas fa-building"></i> Faculty of Information Technology (FTI)</p>
-      </div>
-
-      <p class="footer__copyright">
-        &copy; 2026 Web Server Implementation Project. All rights reserved.
-      </p>
-    </div>
-  </footer>
-
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- Custom Scripts -->
-  <script src="js/script.js"></script>
-</body>
+    <!-- Custom Scripts -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
