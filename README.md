@@ -38,7 +38,7 @@ The website presents project information, team member profiles, technologies use
 | Muhamad Aridho           | 15250365   |
 | Muhamad Rifqi Adriansyah | 15250900   |
 
-Class: **15.2A.01**  
+Class: **15.2A.04**  
 Study Program: **Informatics**  
 Faculty: **Faculty of Information Technology (FTI)**
 
@@ -204,7 +204,7 @@ This project was created for educational purposes and academic learning.
 ---
 
 **Web Server Implementation Project**  
-Class 15.2A.01  
+Class 15.2A.04  
 Informatics Study Program  
 Faculty of Information Technology (FTI)  
 2026
