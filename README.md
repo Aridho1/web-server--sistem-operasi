@@ -199,6 +199,13 @@ git push origin main
 
 ---
 
+## Links
+
+Web: https://aridho1.github.io/web-server--sistem-operasi/
+GDrive: https://drive.google.com/drive/folders/11nA1fnuNAsZQlKZfpenMiXdL6B4yNxdz?usp=drive_link
+
+---
+
 ## License
 
 This project was created for educational purposes and academic learning.
