@@ -1,0 +1,44 @@
+{
+	"Initial": {
+		"NamaKasir": "DOMAR",
+		"KodeToko": "T14AB",
+		"NamaToko": "Indomaret Pusat",
+		"JenisToko": "POINT"
+	},
+	"DaftarBelanja": [
+		{
+			"Deskripsi": "INDOMILK,SUSU KENTAL MANIS PUTIH 370g KLG",
+			"Harga": "12.000",
+			"Qty": "2",
+			"Total": "24.000"
+		},
+		{
+			"Deskripsi": "GREEN SANDS,ORIGINAL LIME & APPLE  330mL KLG",
+			"Harga": "8.500",
+			"Qty": "4",
+			"Total": "34.000"
+		},
+		{
+			"Deskripsi": "INDOMIE,MIE INSTANT AYAM SPECIAL 68g PCK",
+			"Harga": "3.100",
+			"Qty": "5",
+			"Total": "15.500"
+		},
+		{
+			"Deskripsi": "REGAL,MARIE  230g PCK",
+			"Harga": "24.900",
+			"Qty": "1",
+			"Total": "24.900"
+		}
+	],
+	"Summary": {
+		"Hemat": "5.000",
+		"Total": "93.400",
+		"Bayar": "100.000",
+		"Kembali": "6.600"
+	},
+	"TeksSelesai": "Transaksi"
+}
+
+
+
