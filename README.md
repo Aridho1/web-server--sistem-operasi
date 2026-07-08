@@ -203,6 +203,7 @@ git push origin main
 
 Web: https://aridho1.github.io/web-server--sistem-operasi/
 GDrive: https://drive.google.com/drive/folders/11nA1fnuNAsZQlKZfpenMiXdL6B4yNxdz?usp=drive_link
+GDrive2: https://drive.google.com/drive/folders/1-xmbr-1aZkLVERbJFQrC9Vto3GBDFIdF
 
 ---
 
